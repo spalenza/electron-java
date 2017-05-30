@@ -11,7 +11,7 @@ webFrame.setVisualZoomLevelLimits(1, 1);
 webFrame.setLayoutZoomLevelLimits(0, 0);
 
 const java = require('java');
-java.classpath.push("./jars/foobar.jar");
+java.classpath.push("./jars/verify.jar");
 
 // var javaLangSystem = java.import('java.lang.System');
 //
@@ -20,8 +20,8 @@ java.classpath.push("./jars/foobar.jar");
 // list1.addSync('item1');
 // console.log(list1.sizeSync());
 
-var foobar = java.newInstanceSync("foobar.Foo");
+var foobar = java.newInstanceSync("main.Verify");
 
-console.log(foobar.foobarSync());
-console.log(foobar.foobarparamSync('HELLO NODE JAVA! (:'));
-console.log(foobar.writeInFileSync('HELLO NODE JAVA! (:'));
+console.log(foobar.helloWorldSync());
+console.log(foobar.returnStrSync('HELLO NODE JAVA! (:'));
+/* console.log(foobar.writeInFileSync('HELLO NODE JAVA! (:')); */
